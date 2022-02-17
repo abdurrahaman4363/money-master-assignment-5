@@ -76,8 +76,27 @@ document.getElementById('save-btn').addEventListener('click', function(){
             const updateSavingAmount = (parseFloat(SaveIncomeValue) * percentageValue) /100;
             getSavingAmount.innerText = parseFloat(updateSavingAmount);
             const savingAmountValue = getSavingAmount.innerText;
+
+             if( parseFloat(remainingSaveBalance ) < parseFloat(savingAmountValue)){
+              const error = document.getElementById('number-error');
+              error.style.display = 'block';
+        
+              const  rightNumber= document.getElementById('number-right');
+              rightNumber.style.display = 'none';
+             }
+             else{
+              const error = document.getElementById('number-error');
+              error.style.display = 'none';
+        
+              const  rightNumber= document.getElementById('number-right');
+              rightNumber.style.display = 'block';
+
+              
            // remaining balance section
             const remainingBalance = getAllExpenses('remaining-balance');
             const updateRemaingingBalance =  parseFloat(remainingSaveBalance ) - parseFloat(savingAmountValue);
             remainingBalance.innerText = parseFloat(updateRemaingingBalance);
+             }
+
+
 })
