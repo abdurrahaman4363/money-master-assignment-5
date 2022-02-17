@@ -1,7 +1,26 @@
 // function declaration
 function getAllExpenses(expense){
     const expenseInput = document.getElementById(expense+'-input');
-      return expenseInput;
+      
+
+      if(expenseInput.value<0 ){
+          const error = document.getElementById('number-error');
+          error.style.display = 'block';
+
+          const  rightNumber= document.getElementById('number-right');
+          rightNumber.style.display = 'none';
+
+      }
+      else{
+
+        const error = document.getElementById('number-error');
+        error.style.display = 'none';
+
+        const  rightNumber= document.getElementById('number-right');
+        rightNumber.style.display = 'block';
+
+        return expenseInput;
+      }
 }
 
 document.getElementById('calculate').addEventListener('click', function(){
