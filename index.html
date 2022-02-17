@@ -15,9 +15,9 @@
        <div class="container py-4">
            <h1 class="text-center text-primary">Bank Calculation <span><img src="/images/money-bag.png" width="25px" height="25px" alt=""></span> </h1>
            
-           <div class="row gx-5">
-               <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
-                   <img class="bg-light" width="430px" height="600px" src="/images/money-pic.jpg" alt="">
+           <div class="row gy-5 gx-5">
+               <div class="col-12 col-sm-12 col-lg-6 col-xl-6 img-fluid">
+                   <img class="bg-light" width="100%" height="600px" src="/images/money-pic.jpg" alt="">
                </div>
 
             <div class="col-12 col-sm-12 col-lg-6 col-xl-6 bg-light">
@@ -28,7 +28,7 @@
 
                 <tr class="me-3 gx-5 gy-5">
                     <td>Income:</td>
-                    <td><input class="bg-secondary text-white rounded" type="text"></td>
+                    <td><input id="income-input" class="bg-secondary text-white rounded" type="text"></td>
                 </tr>
 
                <h4 class="text-center my-3">Expenses</h4>
@@ -56,8 +56,8 @@
                     </div>
 
 
-                <h5  class="text-center my-3">Total Expenses:<span>5500</span></h5>
-                <h5 class="text-center">Balance:<span>4500</span></h5>
+                <h5  class="text-center my-3">Total Expenses:$<span id="total-expenses">0000</span></h5>
+                <h5 class="text-center">Balance:$<span id="balance">0000</span></h5>
                      
                       <!-- save button -->
                    <div class="text-center my-3">
