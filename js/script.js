@@ -3,7 +3,7 @@ function getAllExpenses(expense){
     const expenseInput = document.getElementById(expense+'-input');
       
 
-      if(expenseInput.value<0 ){
+      if(expenseInput.value<0 || typeof(parseFloat( expenseInput.value)) == 'string' ){
           const error = document.getElementById('number-error');
           error.style.display = 'block';
 
