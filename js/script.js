@@ -24,13 +24,13 @@ function getAllExpenses(expense){
 }
 
 document.getElementById('calculate').addEventListener('click', function(){
-    // input
+    // get input value 
     const foodValue = getAllExpenses('food').value;
     const rentValue = getAllExpenses('rent').value;
     const clothesValue = getAllExpenses('clothes').value;
      const incomeValue = getAllExpenses('income').value;
     
-    // expense total
+    // expense total calculate
     const totalExpenses = parseFloat(foodValue) + parseFloat(rentValue) + parseFloat(clothesValue);
     const getTotalExpenses = getAllExpenses('total-expenses');
     const updateTotalExpenses = parseFloat(totalExpenses); 
@@ -52,7 +52,7 @@ document.getElementById('calculate').addEventListener('click', function(){
       const  rightNumber= document.getElementById('number-right');
       rightNumber.style.display = 'block';
 
-         // balance
+         // balance calculation
       const getBalance = getAllExpenses('balance');
       const updateBalanceValue = parseFloat(incomeValue) - parseFloat(updateTotalExpenses);
       getBalance.innerText = updateBalanceValue;
